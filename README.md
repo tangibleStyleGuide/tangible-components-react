@@ -10,7 +10,7 @@ First ensure you have a React app create - preferably with create-react-app.
 
 ### Prerequisites
 
-Ensure you have a React app created - preferably with create-react-app
+Ensure you have a React app created - preferably with create-react-app.
 The accordion UI was built using [react-accessible-accordions](https://www.npmjs.com/package/react-accessible-accordion?activeTab=dependents)
 
 ### Installing
@@ -42,7 +42,7 @@ To edit the colors of the app simply open the tangible.css file and **control + 
 
 ### Customization
 
-The tangible.css file follow [smaccs](https://smacss.com/) rules and is easy to parse and find elements. Despite this it is not recommended to edit the tangible.css file directly excluding simple things like font, color, text size, etc. If you need to redo a component for your apps needs you should create another .css file that overwrites that specific component.
+The tangible.css file follow [smaccs](https://smacss.com/) rules and is easy to parse and find elements. Despite this it is not recommended to edit the tangible.css file directly excluding simple things like font, color, text size, etc. If you need to redo a component for your app's needs you should create another .css file that overwrites that specific component.
 
 ```
 import "./assets/css/tangible.css";
