@@ -1,0 +1,114 @@
+/* Radio Button Modules */
+
+input[type="radio"] {
+  opacity: 0;
+  margin: 13px 0px 30px;
+}
+
+.custom-control-label {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-left: 49px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.toggle-switch {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+input[type="radio"]:checked ~ .custom-control-label {
+  color: rgba(0, 0, 0, 0.87);
+  padding-bottom: 10px;
+}
+
+.custom-control-label:before {
+  content: "";
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: url("../images/radio/iconRadioUncheckedDark.svg") no-repeat #fff; /* icon path */
+  margin-top: 5px;
+  margin-left: 39px;
+  opacity: 0.54;
+}
+
+input[type="radio"]:checked ~ .custom-control-label:before {
+  background: url("../images/radio/iconRadioCheckedDark.svg") no-repeat #fff; /* icon path */
+  opacity: 0.87;
+  margin-top: 5px;
+  margin-left: 39px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+input[type="radio"]:disabled ~ .custom-control-label.checked:before {
+  background: url("../images/radio/iconRadioCheckedDark.svg") no-repeat #fff; /* icon path */
+  opacity: 0.38;
+  margin-top: 5px;
+  margin-left: 39px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+input[type="radio"] ~ label {
+  content: "";
+  float: left;
+  color: rgba(0, 0, 0, 0.54);
+  margin-top: 0px;
+  padding: 13px 0px 13px 52px;
+  margin-left: -2px;
+}
+
+input[type="radio"].disabled ~ label {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+input[type="radio"].dark ~ .custom-control-label:before {
+  content: "";
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: url("../images/radio/iconRadioUncheckedLight.svg") no-repeat
+    #2f2d2e; /* icon path */
+  margin-top: 5px;
+  margin-left: 39px;
+  opacity: 0.54;
+}
+
+input[type="radio"].dark:disabled ~ .custom-control-label.checked:before {
+  background: url("../images/radio/iconRadioCheckedLight.svg") no-repeat #2f2d2e; /* icon path */
+  opacity: 0.38;
+  margin-top: 5px;
+  margin-left: 39px;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+input[type="radio"].dark:checked ~ .custom-control-label:before {
+  background: url("../images/radio/iconRadioCheckedLight.svg") no-repeat #2f2d2e; /* icon path */
+  opacity: 0.87;
+  margin-top: 5px;
+  margin-left: 39px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+input[type="radio"].dark:checked ~ label {
+  color: rgba(255, 255, 255, 1);
+}
+
+input[type="radio"].dark.disabled ~ label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="radio"].dark ~ label {
+  color: rgba(255, 255, 255, 0.7);
+}

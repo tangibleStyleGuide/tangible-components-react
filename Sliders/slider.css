@@ -1,0 +1,46 @@
+.slider-style {
+  position: relative;
+  width: 280px;
+  height: 28px;
+}
+
+.discrete-slider-style {
+  position: relative;
+  width: 280px;
+  height: 100px;
+  margin: 0px 27px;
+}
+
+.discrete-slider-label-style {
+  position: relative;
+  width: 400;
+  height: 100px;
+  margin-left: 25px;
+}
+
+.discrete-slider-label {
+  position: absolute;
+  padding-top: 10px;
+  font-size: 24px;
+  line-height: 73px;
+  color: #ffffff;
+  text-align: center;
+  z-index: 5;
+  width: 50px;
+}
+
+.range-style-label::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  height: 75px;
+  width: 75px;
+  border: none;
+  border-radius: 38px;
+  background-color: #0066b3;
+  z-index: 2;
+  margin: 10px 0px 20px -9px;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 73px;
+  text-align: center;
+}

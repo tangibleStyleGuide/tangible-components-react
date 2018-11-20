@@ -396,7 +396,7 @@ button {
 
 /* This rule is to give the button a touch target...
 * of +7px on all sides */
-ore {
+.btn::after {
   content: "";
   position: absolute;
   top: -7px;
@@ -494,7 +494,7 @@ input[type="checkbox"] {
   float: left;
   width: 24px;
   height: 24px;
-  background: url("../images/iconCheckboxUncheckedDark.svg") no-repeat #fff;
+  background: url("../images/iconCheckboxUncheckedDark.svg") no-repeat #fff; /* icon path */
   opacity: 0.54;
   margin-top: -4px;
   margin-right: 13px;
@@ -923,14 +923,14 @@ input[type="radio"]:checked ~ .custom-control-label {
   float: left;
   width: 24px;
   height: 24px;
-  background: url("../images/iconRadioUncheckedDark.svg") no-repeat #fff;
+  background: url("../images/iconRadioUncheckedDark.svg") no-repeat #fff; /* icon path */
   margin-top: 5px;
   margin-left: 39px;
   opacity: 0.54;
 }
 
 input[type="radio"]:checked ~ .custom-control-label:before {
-  background: url("../images/iconRadioCheckedDark.svg") no-repeat #fff;
+  background: url("../images/iconRadioCheckedDark.svg") no-repeat #fff; /* icon path */
   opacity: 0.87;
   margin-top: 5px;
   margin-left: 39px;
@@ -938,7 +938,7 @@ input[type="radio"]:checked ~ .custom-control-label:before {
 }
 
 input[type="radio"]:disabled ~ .custom-control-label.checked:before {
-  background: url("../images/iconRadioCheckedDark.svg") no-repeat #fff;
+  background: url("../images/iconRadioCheckedDark.svg") no-repeat #fff; /* icon path */
   opacity: 0.38;
   margin-top: 5px;
   margin-left: 39px;
@@ -963,14 +963,14 @@ input[type="radio"].dark ~ .custom-control-label:before {
   float: left;
   width: 24px;
   height: 24px;
-  background: url("../images/iconRadioUncheckedLight.svg") no-repeat #2f2d2e;
+  background: url("../images/iconRadioUncheckedLight.svg") no-repeat #2f2d2e; /* icon path */
   margin-top: 5px;
   margin-left: 39px;
   opacity: 0.54;
 }
 
 input[type="radio"].dark:disabled ~ .custom-control-label.checked:before {
-  background: url("../images/iconRadioCheckedLight.svg") no-repeat #2f2d2e;
+  background: url("../images/iconRadioCheckedLight.svg") no-repeat #2f2d2e; /* icon path */
   opacity: 0.38;
   margin-top: 5px;
   margin-left: 39px;
@@ -978,7 +978,7 @@ input[type="radio"].dark:disabled ~ .custom-control-label.checked:before {
 }
 
 input[type="radio"].dark:checked ~ .custom-control-label:before {
-  background: url("../images/iconRadioCheckedLight.svg") no-repeat #2f2d2e;
+  background: url("../images/iconRadioCheckedLight.svg") no-repeat #2f2d2e; /* icon path */
   opacity: 0.87;
   margin-top: 5px;
   margin-left: 39px;
@@ -1606,7 +1606,7 @@ input[type="checkbox"]:checked ~ .form-check-label {
 }
 
 input[type="checkbox"]:checked ~ .form-check-label:before {
-  background: url("../images/iconCheckboxCheckedDark.svg") no-repeat #fff;
+  background: url("../images/iconCheckboxCheckedDark.svg") no-repeat #fff; /* icon path */
   opacity: 0.87;
 }
 
@@ -1708,18 +1708,6 @@ button.btn-secondary.icon-toggle {
 
 .list-group-item:last-child {
   border-radius: 0px;
-}
-
-.list-group-item-sm {
-  height: 64px;
-}
-
-.list-group-item-md {
-  height: 80px;
-}
-
-.list-group-item-lg {
-  height: 96px;
 }
 
 /* Sidebar States */
@@ -1917,13 +1905,13 @@ input[type="checkbox"] ~ label.dark {
 
 /* Needs Review - consider renaming */
 .form-check-label.dark:before {
-  background: url("../images/iconCheckboxUncheckedLight.svg") no-repeat #2f2d2e;
+  background: url("../images/iconCheckboxUncheckedLight.svg") no-repeat #2f2d2e; /* icon path */
   opacity: 0.54;
 }
 
 /* Needs Review - consider renaming */
 input[type="checkbox"]:checked ~ .form-check-label.dark:before {
-  background: url("../images/iconCheckboxCheckedLight.svg") no-repeat #000;
+  background: url("../images/iconCheckboxCheckedLight.svg") no-repeat #000; /* icon path */
   opacity: 1;
 }
 

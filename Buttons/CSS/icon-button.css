@@ -1,0 +1,64 @@
+/* Icon Modules */
+
+.icon {
+  height: 24px;
+  width: 24px;
+  opacity: 0.87;
+}
+
+.icon-btn {
+  height: 50px;
+  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+}
+
+/* strange behavior when icon-btn is used with an anchor rather than button...
+  * these two rules fix the problem */
+a.icon-btn {
+  position: relative;
+  float: left;
+}
+
+a.icon-btn > .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -12px; /* accounting for icon dimensions */
+}
+
+.icon-btn > .icon {
+  align-self: center;
+}
+
+.icon-bar {
+  min-height: 50px;
+  width: auto;
+}
+
+.icon-toggle {
+  width: 36px;
+  height: 36px;
+  padding: 6px 6px;
+  border-radius: 4px;
+  margin: 0px 7px 7px 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+.icon-toggle:before {
+  width: 50px;
+  height: 50px;
+  content: "";
+  position: absolute;
+  top: -7px;
+  bottom: -7px;
+  left: -7px;
+  right: -7px;
+  border-radius: 4px;
+  cursor: pointer;
+}

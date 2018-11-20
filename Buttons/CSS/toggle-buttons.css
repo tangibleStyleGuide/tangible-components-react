@@ -1,0 +1,46 @@
+/* Button Toggle States */
+
+.btn-toggle-on,
+.btn-toggle-on.active,
+.btn-toggle-on.focus,
+.btn-toggle-on.hover {
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  outline: none;
+  outline: 0;
+  border: 0;
+}
+
+.btn-toggle-on.disabled {
+  color: rgba(0, 0, 0, 0.38);
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.btn-toggle-off,
+.btn-toggle-off.active,
+.btn-toggle-off.focus,
+.btn-toggle-off.hover {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Button Toggle Theme - Dark */
+
+.btn-toggle-on.dark {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-toggle-on.dark.disabled {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-toggle-off.dark {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.25);
+}

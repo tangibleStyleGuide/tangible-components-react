@@ -1,0 +1,72 @@
+/* List Modules */
+
+.list-group {
+  background-color: transparent;
+  width: 100%;
+  border-radius: 0px;
+}
+
+.list-group-item {
+  height: 64px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 7px 12px 7px 8px;
+}
+
+.list-group-item * {
+  display: inline;
+  white-space: nowrap;
+}
+
+.list-group .list-group-item .list-right {
+  float: right;
+}
+
+/* List States */
+
+.list-group-item:hover,
+.list-group-item:focus {
+  background-color: rgb(0, 0, 0, 0.05);
+}
+
+.list-group-item:first-child {
+  border-radius: 0px;
+  border-top: none;
+}
+
+.list-group-item:last-child {
+  border-radius: 0px;
+}
+
+/* List Theme - Dark */
+
+.list-group.dark {
+  background-color: transparent;
+  word-wrap: none;
+  overflow: hidden;
+}
+
+.list-group.dark * {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.list-group.dark .list-group-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.list-group.dark .list-group-item:first-child {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.list-group.dark .list-group-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

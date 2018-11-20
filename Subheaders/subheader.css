@@ -1,0 +1,13 @@
+/* Sticky Subheaders */
+
+.subheader {
+  padding: 16px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.54);
+  position: sticky;
+  top: 64px;
+  background-color: #f4f4f4;
+  margin: 0px;
+}

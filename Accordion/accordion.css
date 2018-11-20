@@ -1,0 +1,117 @@
+.u-position-absolute {
+  position: absolute;
+}
+
+.u-position-relative {
+  position: relative;
+}
+
+.accordion {
+  border: none;
+}
+
+.accordion:focus {
+  outline: none;
+}
+
+.accordion_.accordion__title {
+  outline: none;
+}
+
+.accordion__item + .accordion__item {
+  border-top: none;
+}
+
+.accordion__item--has-icon {
+  position: relative;
+}
+
+.accordion__title {
+  background-color: transparent;
+  color: #444;
+  cursor: pointer;
+  padding-left: 30px;
+  padding-top: 22px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  height: 64px;
+  padding-top: auto;
+}
+
+.accordion__title:hover {
+  padding-left: 25px;
+  background-color: #f4f4f4;
+  border-left: 5px solid #14b1e7; /* secondary */
+}
+
+.accordion__title:focus {
+  padding-left: 25px;
+  background-color: #f4f4f4;
+  border-left: 5px solid #14b1e7; /* secondary */
+  outline: none;
+  user-select: none;
+}
+
+.accordion__body {
+  display: block;
+  animation: fadein 0.35s ease-in;
+}
+
+.accordion__body--hidden {
+  display: none;
+  opacity: 0;
+  animation: fadein 0.35s ease-in;
+}
+
+.accordion__title > *:last-child,
+.accordion__body > *:last-child {
+  margin-bottom: 0;
+}
+
+.accordion__arrow {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -6px;
+}
+
+.accordion__arrow::after,
+.accordion__arrow::before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor;
+  content: "";
+}
+
+.accordion__arrow::before {
+  left: 4px;
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .accordion__arrow::before,
+[aria-selected="true"] .accordion__arrow::before {
+  transform: rotate(-45deg);
+}
+
+.accordion__arrow::after {
+  right: 4px;
+  transform: rotate(-45deg);
+}
+
+[aria-expanded="true"] .accordion__arrow::after,
+[aria-selected="true"] .accordion__arrow::after {
+  transform: rotate(45deg);
+}
+
+.accordion__arrow::before,
+.accordion__arrow::after {
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}

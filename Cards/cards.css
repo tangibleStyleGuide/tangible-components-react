@@ -1,0 +1,71 @@
+/* Card Modules */
+
+.card {
+  min-width: 200px;
+  width: 400px;
+  height: auto;
+  margin: 12px;
+  overflow: auto;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff; /* content background light */
+  border: none;
+}
+
+.card-header {
+  padding: 16px;
+  background-color: #ffffff; /* content background light */
+}
+
+.card-body {
+  padding: 0px;
+}
+
+.card-footer {
+  background-color: #ffffff; /* content background light */
+}
+
+.card-text {
+  font-style: 14px;
+  line-height: 20px;
+  opacity: 0.54;
+  padding: 16px;
+}
+
+.card-img {
+  border-radius: 0px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  opacity: 0.54;
+}
+
+/* Card Theme - Dark */
+
+.card.dark {
+  color: #fff;
+  box-shadow: 0px 1px 1px #2f2d2e; /* black */
+  background-color: #595758;
+}
+
+.card.dark .card-title {
+  color: #fff;
+}
+
+.card.dark p {
+  opacity: 0.7;
+}
+
+.card-body.dark {
+  background-color: #595758;
+}
+
+.card.dark .card-header,
+.card.dark .card-body,
+.card.dark .card-footer {
+  background-color: #595758;
+}
