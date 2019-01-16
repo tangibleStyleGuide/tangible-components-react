@@ -1,0 +1,94 @@
+/* *
+* Tangible Style Guide
+* Copyright 2018 Freeman Co.
+*
+* # Toggle Sliders
+*  */
+
+.toggleSlider:after {
+  position: absolute;
+  content: attr(id);
+  margin-left: 63px;
+  width: 200px;
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+input[type="checkbox"]:disabled ~ .toggleSlider:after {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+input[type="checkbox"]:checked ~ .toggleSlider:after {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.toggleSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.38);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 12px;
+  height: 24px;
+  margin: 13px 0px;
+}
+
+.toggleSlider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 9px;
+}
+
+input:checked + .toggleSlider {
+  background-color: #3385c2;
+}
+
+input:checked + .toggleSlider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: #fff;
+}
+
+input:disabled ~ .toggleSlider {
+  background-color: rgba(0, 0, 0, 0.12);
+  cursor: default;
+}
+
+input:disabled ~ .toggleSlider:before {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+input:disabled ~ .toggleSlider.dark {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+input:disabled ~ .toggleSlider.dark:before {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+input[type="checkbox"] ~ .toggleSlider.dark:after {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:checked + .toggleSlider.dark:after {
+  color: #fff;
+}
+
+input[type="checkbox"]:disabled ~ .toggleSlider.dark:after {
+  color: rgba(255, 255, 255, 0.5);
+}

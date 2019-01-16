@@ -1,0 +1,434 @@
+/*
+* # Tangible Style Guide
+* * Copyright 2018 Freeman Co. *
+*
+* This file organized using some SMACSS methodology: https://smacss.com/
+*
+* Rules:
+* ` Base    - Default rules. Most often single element selectors
+* ` Layout  - Rules for elements that contain modules
+* ` Modules - Reusable, modular parts of the design
+* ` States  - Element rules when effected by states
+* ` Theme   - Similar to state; most sites will not need Theme rules
+* 
+* Knowing these rules one can easily search this file by using the
+* name of the rule:
+* ` Search "Body" --------- = Body Base rules
+* ` Search "Button Modules" = Button Module rules
+* ` Search "Button States"  = Button State rules
+*/
+
+/* 
+* Colors
+* Use control + f and the tag after the /* to search for a color
+* Example: "/* black" will return all the rules using the black-8 shade
+*
+* freeman-blue: #0066b3;
+* blue-2: #14b1e7;
+* blue-3: #90cff2;
+* red: #f15a22;
+* orange-4: #ff9933;
+* gold-5: #ffdd00;
+* green-6: #b0d235;
+* green-6-1: #9fcc00;
+* green-7: #65a943;
+* black-8: #2f2d2e; /* black 
+* gray-9: #c7c6c6;
+*
+* primary: #0066b3; /* primary 
+* primary--light: #3385c2;
+* primary--dark: #004d86;
+* secondary: #14b1e7; /* secondary 
+* secondary--light: #2cbced;
+* secondary--dark: #1091bc;
+* background-grey: #f4f4f4;
+* content-background-light: #ffffff; /* content background light 
+* content-background-dark: #595758; /* content background dark 
+*
+* primary-text: rgba(0, 0, 0, 0.87); /* primary text 
+* secondary-text: rgba(0, 0, 0, 0.54);
+* disabled-text: rgba(0, 0, 0, 0.38);
+* primary-text--dark: rgba(250, 250, 250, 1);
+* secondary-text--dark: rgba(250, 250, 250, 0.7);
+* disabled-text--dark: rgba(250, 250, 250, 0.5);
+* font-family: "Arial", sans-serif; /* font family 
+*
+* btn-primary: #3385c2; /* btn primary 
+* btn-secondary: rgba(0, 0, 0, 0.1); /* btn secondary 
+*/
+
+/*`#####````####````####```######`
+*``##``##``##``##``##``````##`````
+*``#####```######```####```####```
+*``##``##``##``##``````##``##`````
+*``#####```##``##```####```######`
+*`````````````````````````````````
+* Base Rules */
+
+html {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Arial", sans-serif; /* font family */
+  color: rgba(0, 0, 0, 0.87); /* primary text */
+  font-size: 12px;
+  line-height: 18px;
+}
+
+img {
+  border: 0px;
+}
+
+a,
+a:active,
+a:hover {
+  color: #14b1e7; /* secondary */
+  text-decoration: none;
+}
+
+p > a {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+p {
+  max-width: 400px;
+}
+
+.caption {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/*
+*``##```````####```##``##```####```##``##``######`
+*``##``````##``##```####```##``##``##``##````##```
+*``##``````######````##````##``##``##``##````##```
+*``##``````##``##````##````##``##``##``##````##```
+*``######``##``##````##`````####````####`````##```
+*`````````````````````````````````````````````````
+* LAYOUT
+*/
+
+.container {
+  margin: 0px;
+  padding: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.container-fluid {
+  display: block;
+  padding: 0px;
+  text-align: left;
+  transition: margin-left 0.5s, width 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.content {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 128px auto 200px;
+}
+
+.row {
+  margin: 0;
+}
+
+.header {
+  height: 64px;
+  width: 100%;
+  z-index: 1000;
+  top: 0px;
+  right: 0px;
+  position: fixed;
+  background-color: #0066b3; /* primary */
+  overflow-x: hidden;
+  padding: 7px;
+}
+
+.sidebar {
+  padding: 0px;
+  width: 256px;
+  height: auto;
+  min-width: 256px;
+  min-height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1009;
+  display: inline-block;
+  overflow-x: hidden;
+  overflow-y: scroll; /* Scrollable contents if viewport is shorter than content. */
+  background-color: #ffffff; /* content background light */
+  transition: margin-left 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.footer {
+  width: 100%;
+  min-height: 64px;
+  display: inline-block;
+}
+
+/*``####```##``##``######``##```##```####```######``######```####```##``##```####``
+*``##``##``###`##````##````###`###``##``##````##``````##````##``##``###`##``##`````
+*``######``##`###````##````##`#`##``######````##``````##````##``##``##`###```####``
+*``##``##``##``##````##````##```##``##``##````##``````##````##``##``##``##``````##`
+*``##``##``##``##``######``##```##``##``##````##````######```####```##``##```####``
+```````````````````````````````````````````````````````````````````````````````````
+* Animations Rules */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    top: calc(-100%);
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(5px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-5px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Progress Indicator animations */
+@keyframes loadingBar {
+  0% {
+    left: 0;
+    width: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  20% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+    width: 50%;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}
+
+@keyframes loading1 {
+  0% {
+    left: 0;
+    width: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  60% {
+    left: 0;
+    width: 100%;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  100% {
+    left: 0;
+    width: 100%;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}
+
+@keyframes progress {
+  from {
+    stroke-dashoffset: 339.292;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes loading3 {
+  0% {
+    transform: scale(1.2);
+  }
+  33.3333% {
+    transform: scale(1);
+  }
+  66.6666% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes loading2 {
+  0% {
+    transform: scale(1);
+  }
+  33.3333% {
+    transform: scale(1.2);
+  }
+  66.6666% {
+    transform: scale(1);
+  }
+  100% {
+  }
+}
+
+@keyframes loading4 {
+  0% {
+  }
+  33.3333% {
+    transform: scale(1);
+  }
+  66.6666% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*`##````##``######``#####```######```####``
+*``###``###``##``````##``##````##````##``##`
+*``##`##`##``####````##``##````##````######`
+*``##````##``##``````##``##````##````##``##`
+*``##````##``######``#####```######``##``##`
+*```````````````````````````````````````````
+* Media Rules */
+
+@media (max-width: 767px) {
+  /* .sidebar:not(.sidebar-hidden) {
+        margin-left: 0px;
+    } */
+
+  /* .sidebar.sidebar-hidden {
+		margin-left: 0px;
+	} */
+
+  .navbar {
+    margin-left: 0px;
+  }
+
+  .tabs {
+    margin-left: 0px;
+  }
+
+  .sidebar.sidebar-hidden ~ .container-fluid {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  /* .main-container {
+		margin-left: 0px;
+    } */
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

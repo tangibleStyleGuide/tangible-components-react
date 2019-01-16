@@ -1,0 +1,41 @@
+/* *
+* Tangible Style Guide
+* Copyright 2018 Freeman Co.
+*
+* # Icon Button
+*  */
+
+.icon {
+  height: 24px;
+  width: 24px;
+  opacity: 0.87;
+}
+
+.icon-btn {
+  height: 50px;
+  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+}
+
+/* strange behavior when icon-btn is used with an anchor rather than button...
+  * these two rules fix the problem */
+a.icon-btn {
+  position: relative;
+  float: left;
+}
+
+a.icon-btn > .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -12px; /* accounting for icon dimensions */
+}
+
+.icon-btn > .icon {
+  align-self: center;
+}

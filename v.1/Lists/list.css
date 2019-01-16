@@ -1,9 +1,4 @@
-/* *
-* Tangible Style Guide
-* Copyright 2018 Freeman Co.
-*
-* # List
-*  */
+/* List Modules */
 
 .list-group {
   background-color: transparent;
@@ -43,18 +38,6 @@
 
 .list-group-item:last-child {
   border-radius: 0px;
-}
-
-.list-group-item-sm {
-  height: 64px;
-}
-
-.list-group-item-md {
-  height: 80px;
-}
-
-.list-group-item-lg {
-  height: 96px;
 }
 
 /* List Theme - Dark */

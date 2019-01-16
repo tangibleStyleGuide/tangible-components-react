@@ -1,9 +1,4 @@
-/* *
-* Tangible Style Guide
-* Copyright 2018 Freeman Co.
-*
-* # Cards
-*  */
+/* Card Modules */
 
 .card {
   min-width: 200px;
@@ -14,7 +9,6 @@
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
   background-color: #ffffff; /* content background light */
   border: none;
-  text-align: left;
 }
 
 .card-header {
@@ -31,7 +25,7 @@
 }
 
 .card-text {
-  font-size: 14px;
+  font-style: 14px;
   line-height: 20px;
   opacity: 0.54;
   padding: 16px;

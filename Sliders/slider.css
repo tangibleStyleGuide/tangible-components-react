@@ -1,3 +1,102 @@
+/* *
+* Tangible Style Guide
+* Copyright 2018 Freeman Co.
+*
+* # Sliders
+*  */
+
+input.range-style {
+  outline: none;
+}
+
+progress::-webkit-progress-value {
+  background-color: #0066b3;
+  z-index: 500;
+}
+
+progress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  height: 6px;
+  border-radius: 3px;
+}
+
+input::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  border: none;
+  border-radius: 12px;
+  background-color: #0066b3;
+  z-index: 2;
+  box-shadow: var(--thumb-shadow);
+  margin: 4px 0px 0px -10px;
+}
+
+.range-style {
+  --webkitAppearance: none;
+  appearance: none;
+  touch-action: pan-y;
+  position: absolute;
+  margin: 0px 0px 0px 10px;
+  padding: 0;
+  width: 280px;
+  background-color: transparent;
+}
+
+.range-style-label {
+  --webkitAppearance: none;
+  appearance: none;
+  touch-action: pan-y;
+  position: absolute;
+  margin: 0px 0px 0px -15px;
+  padding: 0;
+  width: 330px;
+  background-color: transparent;
+}
+
+.progress-bar-style {
+  --webkitAppearance: none;
+  appearance: none;
+  position: absolute;
+  display: block;
+  margin: 0;
+  top: 13px;
+  left: 13px;
+  width: 256px;
+  height: 3px;
+  z-index: 0;
+}
+
+.progress-bar-label-style {
+  --webkitAppearance: none;
+  appearance: none;
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  top: 13px;
+  left: 13px;
+  width: 256px;
+  height: 3px;
+  z-index: 1009;
+  opacity: 0;
+}
+
+.range-style-label::-webkit-slider-thumb:after {
+  content: "Dude";
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+  opacity: 100%;
+}
+
 .slider-style {
   position: relative;
   width: 280px;

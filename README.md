@@ -1,21 +1,21 @@
 # Tangible React Components
-
-Tangible is intended to be a visual language of styles, layouts, components, patterns, and rules that provide a consistent, thoughtful approach to user interface design.
+Tangible is intended to be a visual language of styles, layouts, components, patterns, and rules that provide a consistent, thoughtful approach to user interface design. 
 
 When Tangible is implemented, we create the opportunity to focus on designing user experiences that are more meaningful, more engaging, more enriching, and ultimately more personal.
 
 ## Getting Started
 
+First ensure you have a React app create - preferably with create-react-app. 
+
 ### Prerequisites
 
-Ensure you have a React app created - preferably with create-react-app.
+Ensure you have a React app created - preferably with create-react-app
+The accordion UI was built using [react-accessible-accordions](https://www.npmjs.com/package/react-accessible-accordion?activeTab=dependents)
 
-1. The accordion UI was built using [react-accessible-accordions](https://www.npmjs.com/package/react-accessible-accordion?activeTab=dependents).
-2. The modal dialogs were built using [react-responsive-modal](https://www.npmjs.com/package/react-responsive-modal).
 
 ### Installing
 
-Download and add the tangible.css file to the css folder in your app. There are two options: tangible.css which is the full tangible library with all the UI component rules or there is the tangible-basic.css which has all the base and layout rules. Keep in mind that if you choose to use the tangible-basic.css you will need to add the corresponding UI component's css file for each UI element used.
+Download and add the tangible.css file to the css folder in your app
 
 1. In the App.js file import tangible.css
 
@@ -23,36 +23,51 @@ Download and add the tangible.css file to the css folder in your app. There are 
 import "./assets/css/tangible.css";
 ```
 
-## Setup
+## Colors
 
-### Colors
-
-To edit the colors of the app simply open the tangible.css file and **control + f** search for
-
-- "/\* primary"
-- "/\* secondary"
-- "/\* primary text"
-- etc. (they are listed in the file)
+To edit the colors of the app simply open the tangible.css file and **control + f** search for 
+* /* primary
+* /* secondary
+* /* primary text 
+* etc. (they are listed in the file)
 
 Then replace the hex or rgb value to your desired color
 
-### Font
+### Break down into end to end tests
 
-To edit the colors of the app simply open the tangible.css file and **control + f** search for "/\* font family"
-
-### Icons
-
-To edit the icons for things like checkboxes and radio buttons open the .css file and **control + f** search for "/\* icon path \*\". Then edit the url rule to the path of your prefered icon; remember to do this for all the states of the element.
-
-### Customization
-
-The tangible.css file follows [smaccs](https://smacss.com/) rules and is easy to parse and find elements. Despite this it is not recommended to edit the tangible.css file directly excluding simple things like font, color, text size, etc. If you need to redo a component for your app's needs you should create another .css file that overwrites that specific component.
+Explain what these tests test and why
 
 ```
-import "./assets/css/tangible.css";
-import "./custom-cards.css";
+Give an example
 ```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-- (Current) [Version: 1.5.0](https://github.com/tangibleStyleGuide/tangible-components-react/commits/V1.5.0)
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc

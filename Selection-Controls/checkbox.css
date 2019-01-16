@@ -1,0 +1,96 @@
+/* *
+* Tangible Style Guide
+* Copyright 2018 Freeman Co.
+*
+* # Checkbox
+*  */
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+/* Needs Review - consider renaming */
+.form-check-label {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.54);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Needs Review - consider renaming */
+.form-check {
+  display: inline-block;
+  padding: 13px;
+}
+
+/* Needs Review - consider renaming */
+.form-check-label:before {
+  content: "";
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: url("../images/iconCheckboxUncheckedDark.svg") no-repeat #fff;
+  opacity: 0.54;
+  margin-top: -4px;
+  margin-right: 13px;
+}
+
+input[type="checkbox"]:checked ~ .form-check-label {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+input[type="checkbox"]:checked ~ .form-check-label:before {
+  background: url("../images/iconCheckboxCheckedDark.svg") no-repeat #fff;
+  opacity: 0.87;
+}
+
+input[type="checkbox"].disabled:before {
+  opacity: 0.38;
+}
+
+input[type="checkbox"].disabled:checked ~ .form-check-label:before {
+  opacity: 0.38;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+input[type="checkbox"]:checked ~ .form-check-label.disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+input[type="checkbox"]:checked ~ .form-check-label.dark.disabled {
+  opacity: 0.38;
+}
+
+.form-check-label.disabled {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+input[type="checkbox"]:disabled:checked ~ .form-check-label:before {
+  opacity: 0.38;
+}
+
+/* Checkbox Theme - Dark */
+
+input[type="checkbox"]:checked ~ .form-check-label.dark {
+  opacity: 1;
+  color: rgba(255, 255, 255, 1);
+}
+
+input[type="checkbox"] ~ label.dark {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Needs Review - consider renaming */
+.form-check-label.dark:before {
+  background: url("../images/iconCheckboxUncheckedLight.svg") no-repeat #2f2d2e;
+  opacity: 0.54;
+}
+
+/* Needs Review - consider renaming */
+input[type="checkbox"]:checked ~ .form-check-label.dark:before {
+  background: url("../images/iconCheckboxCheckedLight.svg") no-repeat #000;
+  opacity: 1;
+}

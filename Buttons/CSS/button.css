@@ -1,0 +1,85 @@
+/* *
+* Tangible Style Guide
+* Copyright 2018 Freeman Co.
+*
+* # Button
+*  */
+
+.btn {
+  position: relative;
+  height: 36px;
+  min-height: 36px;
+  min-width: 90px;
+  margin: 7px 7px 7px 0px;
+  padding: 10px 12px;
+  border-radius: 4px;
+  line-height: 16px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: none;
+}
+
+button {
+  z-index: 100;
+}
+
+/* This rule is to give the button a touch target...
+* of +7px on all sides */
+.btn:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  bottom: -7px;
+  left: -7px;
+  right: -7px;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #3385c2; /* btn primary */
+  border-color: #3385c2; /* btn primary */
+}
+
+.btn-secondary {
+  color: rgba(0, 0, 0, 0.87); /* primary text */
+  background-color: rgba(0, 0, 0, 0.1); /* btn secondary */
+  border-color: rgba(0, 0, 0, 0.1); /* btn secondary */
+  border: none;
+}
+
+/* Button States */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #3385c2; /* btn primary */
+  border-color: #3385c2; /* btn primary */
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: #fff;
+  background-color: rgba(0, 152, 255, 0.5);
+  border: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+  color: rgba(0, 0, 0, 0.38);
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+}
